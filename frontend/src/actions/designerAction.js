@@ -16,6 +16,9 @@ import {ALL_DESIGNER_FAIL,
     REGISTER_DESIGNER_REQUEST,
     REGISTER_DESIGNER_SUCCESS,
     REGISTER_DESIGNER_FAIL,
+    ADMIN_DESIGNER_REQUEST,
+    ADMIN_DESIGNER_SUCCESS,
+    ADMIN_DESIGNER_FAIL,
 } from "../constants/designerConstants";
 
 //get Designer
@@ -48,6 +51,26 @@ async (dispatch)=>{
         });
     }
 };
+
+
+// Get All Designers For Admin
+export const getAdminDesigner = () => async (dispatch) => {
+    try {
+      dispatch({ type: ADMIN_DESIGNER_REQUEST });
+  
+      const { data } = await axios.get("/api/v1/admin/designers");
+  
+      dispatch({
+        type: ADMIN_DESIGNER_SUCCESS,
+        payload: data.designers,
+      });
+    } catch (error) {
+      dispatch({
+        type: ADMIN_DESIGNER_FAIL,
+        payload: error.response.data.message,
+      });
+    }
+  };
 
 
 

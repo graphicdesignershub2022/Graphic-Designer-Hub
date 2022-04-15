@@ -3,7 +3,7 @@ const express = require("express");
 const { getAllDesigners,createDesigner, 
         updateDesigner, deleteDesigner,
         getDesignerDetails, createDesignerReview, 
-        getDesignerReviews, deleteReview } = require("../controllers/designerController");
+        getDesignerReviews, deleteReview, getAdminDesigners } = require("../controllers/designerController");
 
 const { registerDesigner, loginDesigner, 
         forgotPassword, resetPassword, updatePassword, 
@@ -56,7 +56,8 @@ router.route("/designer/password/update").put(isAuthenticatedDesigner, updatePas
 router.route("/dme").get(isAuthenticatedDesigner, getDesignerLDetails);
 
 
-
+//admin getAll Designer
+router.route("/admin/designers").get(isAuthenticatedUser,authorizeRoles("admin"),getAdminDesigners)
 
 
 

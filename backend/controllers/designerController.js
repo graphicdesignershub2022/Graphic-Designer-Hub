@@ -47,6 +47,23 @@ exports.getAllDesigners = catchAsyncError(async(req,res)=>{
 });
 
 
+//gET ALL dESIGNER -- (ADMIN)
+exports.getAdminDesigners = catchAsyncError(async(req,res)=>{
+
+  const designers = await Designer.find()
+
+  res.status(201).json({
+      success:true,
+      designers,
+  });
+  
+});
+
+
+
+
+
+
 //Update the Designer --Admin
 exports.updateDesigner = catchAsyncError(async (req,res,next)=>{
 

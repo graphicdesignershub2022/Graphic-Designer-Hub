@@ -14,11 +14,9 @@ import {ALL_DESIGNER_FAIL,
     REGISTER_DESIGNER_REQUEST,
     REGISTER_DESIGNER_SUCCESS,
     REGISTER_DESIGNER_FAIL,
-    // LOAD_DESIGNER_REQUEST,
-    // LOAD_DESIGNER_SUCCESS,
-    // LOAD_DESIGNER_FAIL,
-    // LOGOUT_SUCCESS,
-    // LOGOUT_FAIL,
+    ADMIN_DESIGNER_REQUEST,
+    ADMIN_DESIGNER_SUCCESS,
+    ADMIN_DESIGNER_FAIL,
     CLEAR_ERRORS
 } from "../constants/designerConstants";
 
@@ -26,6 +24,7 @@ export const designerReducer = (state = { designers : [] }, action) => {
     
     switch (action.type) {
         case ALL_DESIGNER_REQUEST:
+          case ADMIN_DESIGNER_REQUEST:
             return {
                 loading: true,
                 designers: []
@@ -40,8 +39,15 @@ export const designerReducer = (state = { designers : [] }, action) => {
                 filteredDesignersCount: action.payload.filteredDesignersCount,
             }
 
+              case ADMIN_DESIGNER_SUCCESS:
+                return {
+                loading: false,
+                designers: action.payload,
+              };
+
 
             case ALL_DESIGNER_FAIL:
+              case ADMIN_DESIGNER_FAIL:
             return {
                 loading: false,
                 error: action.payload,

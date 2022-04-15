@@ -23,7 +23,8 @@ import About from "./component/About/About";
 import DesignerLoginSignUp from './component/Designer/DesignerLoginSignUp';
 import MyOrders from "./component/Order/MyOrders";
 import OrderDetails from "./component/Order/OrderDetails.js"
-
+import Dashboard from "./component/admin/Dashboard";
+import DesignerList from "./component/admin/DesignerList.js"
 
 
 function App() {
@@ -76,6 +77,13 @@ function App() {
       <Route exact path="/password/reset/:token" component={ResetPassword} />
 
       <Route exact path="/about" component={About} />
+
+
+      {/* Admin ROutes */}
+      <ProtectedRoute isAdmin={true} exact path="/admin/dashboard" component={Dashboard} />
+
+      <ProtectedRoute isAdmin={true} exact path="/admin/designers" component={DesignerList} />
+
 
       {/* DESIGNER ROUTE */}
       <Route exact path="/designerLogin" component={DesignerLoginSignUp} />
