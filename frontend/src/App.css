@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* order button */
+.detailsBlock-4-1 > button:last-child {
+    border: none;
+    cursor: pointer;
+    color: rgb(250, 250, 250);
+    transition: all 0.5s;
+    border-radius: 20px;
+    padding: 0.5vmax 2vmax;
+    outline: none;
+}

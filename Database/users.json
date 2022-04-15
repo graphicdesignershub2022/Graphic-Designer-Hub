@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "624d821f4ae56f3398b0a868"
+  },
+  "role": "admin",
+  "name": "Abhishek Kidye",
+  "email": "abhishek@gmail.com",
+  "password": "$2a$10$OQhbertEqzOTV7DZ2jyZY.YiCvb10zI4VedxTuWNKPb/3LWnmC2Qm",
+  "avatar": {
+    "public_id": "myCloud.public_id",
+    "url": "https://res.cloudinary.com/abhishek27/image/upload/v1649274973/avatars/headlight-need-for-speed-ford-mustang_vajfss.jpg"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "624ed2b5f82d023e7c9ebdeb"
+  },
+  "avatar": {
+    "url": "https://res.cloudinary.com/abhishek27/image/upload/v1649332453/avatars/avtr_fvhwqs.jpg",
+    "public_id": {
+      "$date": {
+        "$numberLong": "1649332917088"
+      }
+    }
+  },
+  "role": "admin",
+  "name": "test K",
+  "email": "test@gmail.com",
+  "password": "$2a$10$fckLWFe2ZLHdKq5lMyeGu.zg1XRDbSK4LfJ0K22SK8hIUGgbyAq1.",
+  "__v": 0,
+  "resetPasswordExpire": {
+    "$date": {
+      "$numberLong": "1649359267850"
+    }
+  },
+  "resetPasswordToken": "bd6d8e458bf17e8d1859c7ed114e8f0bf39c859ba69733ea65f5ae31178b594b"
+},{
+  "_id": {
+    "$oid": "62500dc3b185591fe47b2dbe"
+  },
+  "avatar": {
+    "url": "https://res.cloudinary.com/abhishek27/image/upload/v1649332453/avatars/avtr_fvhwqs.jpg",
+    "public_id": {
+      "$date": {
+        "$numberLong": "1649413571960"
+      }
+    }
+  },
+  "role": "user",
+  "name": "Rohan",
+  "email": "rohan@gmail.com",
+  "password": "$2a$10$80PrSOFfhK.hBhEjcc4eUOCc0f.n34jQBPs6RMVUYOn4sVCEA.q3e",
+  "__v": 0
+}]
